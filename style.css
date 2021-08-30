@@ -1,0 +1,211 @@
+
+*{
+    margin: 0px;/*définit les marges, c'est à dire l'espace réservé tout autour de l'élément, à l'extérieur de sa bordure (explications page 261)*/
+    padding: 0px;/*définit les marges intérieures*/
+    font-family: Avenir, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: #5d151b;
+    background-size: cover;
+}
+  
+.titre1 {
+    font-size: 30px;
+    color: #df0d15;
+    text-shadow: 0.1em 0.1em 0.1em black;
+    margin-top: 0px;
+    text-align: center;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+  
+.logo {
+    display: block;
+    margin:auto;
+}
+
+.menu-responsive {
+    display: none;
+}
+
+.cadre {
+    width: 1000px; 
+    height:auto;
+    margin: auto;
+    position: relative; 
+    background-color: white; 
+}
+
+header {
+    position: center;
+    background-color: white;
+}
+
+nav{
+    width: 100%;   /*la propriété width sert à définir la largeur d'un élément et accepter des valeurs aussi bien en em qu'en % ; ici c'est la largeur égale à 100% de la page.*/
+    margin: 0 auto;   /*auto sert à centrer horizontalement un élément dans son parent*/
+    background-color: white;   /*définit la couleur de fond de la page entière*/
+    position: sticky;
+    top: 0px;  
+}
+
+nav ul{
+    list-style-type: none;   /*enlève les points de menu*/
+    display: flex;   /*la valeur par défaut de display est display:inline*/
+}
+
+nav ul li{
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid #e01219;
+    background-color:#e01219;
+    border-radius: 10px;
+    transition: 0.8s
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 10px;   
+}
+
+@media all and (max-width: 480px) {
+    
+    nav, .logo, .titre1 {
+       display: none; 
+       }
+
+    header {
+        background-color: #5d151b;
+    }
+       
+    .menu-responsive {
+       display:inline-block;
+       }
+
+    .c-header {
+        width: 100%;
+        height: 60px;
+        background-color: #5d151b;
+        position:fixed;
+        } 
+   
+    .c-btn-icon {    
+        position:absolute;
+        top: 20px;
+        left: 15px;
+        height: 22px;
+        width: 22px;
+        cursor: pointer;
+        }
+        
+    .c-btn-bar {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position:absolute
+        }
+        
+    .c-btn-bar--horizontal {
+        position: relative;
+        float: left;
+        margin-top: 3px;
+        transition: all .3s;
+        }
+        
+    .c-btn-bar--diagonal {
+        position: relative;
+        float: left;
+        transition: all .3s;
+        }
+        
+    .c-btn-bar--diagonal.diagonal-1 {
+        transition: all .3s;
+        }
+        
+    .c-btn-bar--diagonal.diagonal-2 {
+        margin-top: 3px;
+        transition: all .3s;
+        }
+        
+    input[type="checkbox"] {
+        display: none;   
+        }
+        
+    input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--horizontal {
+        opacity: 0;
+        transition: all .3s;
+        }
+        
+    input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--diagonal.diagonal-1 {
+        transform: rotate(135deg);
+        margin-top: 8px;
+        transition: all .3s;
+        }
+        
+    input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--diagonal.diagonal-2 {
+        transform: rotate(-135deg);
+        margin-top: -8px;
+        transition: all .3s;
+        }
+        
+    .c-sidebar {
+        position: fixed;
+        width: 140px;
+        height: 100%;
+        margin-top: 60px;
+        transform : translateX(-250px);
+        transition: transform 250ms ease-in-out;
+        background-color: #5d151b;
+        }
+        
+    input[type="checkbox"]:checked ~ .c-sidebar {
+        transform: translateX(0);
+        }
+        
+    .c-sidebar-items {
+        border-top: 1px solid white;
+        margin: 0;
+        padding:0;
+        
+        }
+        
+    .c-sidebar-items li {
+        cursor: pointer;
+        list-style: none;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold; 
+        padding: 20px;
+        border-bottom:1px;
+        }
+}
+   
+    
+
