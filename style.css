@@ -110,7 +110,7 @@ nav > ul li:hover .sous{
        display: block;
        top: 20px;
        margin-left: auto;
-       margin-right: auto;
+       margin-right: 15%;
     }
    
     h1 {
