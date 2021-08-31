@@ -101,25 +101,35 @@ nav > ul li:hover .sous{
 
 @media all and (max-width: 480px) {
     
-    nav, .logo, .titre1 {
+    nav, .titre1 {
        display: none; 
     }
 
-    .logo2 {
+    .logo {
+      
+      display: inline-block;
+      position: relative; 
+      left: 58px; 
+      right: 10px;
+      width: 400px;
+      
+    }
+
+    /*.logo2 {
        position: relative;
        display: block;
        top: 20px;
        margin-left: auto;
        margin-right: 15%;
-    }
+    }*/
    
     h1 {
        position:absolute;
        color:white;
        font-weight: bold; 
-       font-size: 20px;
-       top : 70px;
-       left: 25px;
+       font-size: 15px;
+       top : 10px;
+       left: 4px;
        text-transform: uppercase;
     }
 
@@ -140,8 +150,8 @@ nav > ul li:hover .sous{
    
     .c-btn-icon {    
         position:absolute;
-        top: 30px;
-        left: 45px;
+        top: 40px;
+        left: 15px;
         height: 22px;
         width: 22px;
         cursor: pointer;
@@ -201,7 +211,7 @@ nav > ul li:hover .sous{
         position: fixed;
         width: 100%;
         height: 100%;
-        margin-top: 45px;
+        margin-top: 25px;
         transform : translateX(-100%);
         transition: transform 250ms ease-in-out;
         background-color: #5d151b;
