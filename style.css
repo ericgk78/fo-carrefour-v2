@@ -109,9 +109,10 @@ nav > ul li:hover .sous{
       
       display: inline-block;
       position: relative; 
-      left: 58px; 
-      right: 10px;
-      width: 400px;
+      left: 65px; 
+      right: 6px;
+      width: 380px;
+      top: 6px;
       
     }
 
@@ -188,7 +189,7 @@ nav > ul li:hover .sous{
         
     input[type="checkbox"] {
         display: none;   
-        }
+        }     
         
     input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--horizontal {
         opacity: 0;
@@ -211,23 +212,23 @@ nav > ul li:hover .sous{
         position: fixed;
         width: 100%;
         height: 100%;
-        margin-top: 25px;
+        margin-top: 1px;
         transform : translateX(-100%);
         transition: transform 250ms ease-in-out;
         background-color: #5d151b;
         }
-
            
     input[type="checkbox"]:checked ~ .c-sidebar {
         transform: translateX(0);
         }
+      
         
     .c-sidebar-items {
         border-top: 1px solid white;
         margin: 0;
         padding:0;
         }
-        
+      
     .bar-white {
         border-top: 1px solid white;
         margin: 0;
@@ -242,8 +243,27 @@ nav > ul li:hover .sous{
         font-weight: bold; 
         padding: 20px;
         border-bottom:1px;
-        }
+    }
+      
+    input[type="checkbox"]:checked ~ .divider {
+            opacity: 0;  
+    } 
+
+    .divider {
+        display: flex;
+        position: relative;
+        align-items: center;
+        flex-grow: 1;
+        height: 1px;
+        background-color: white ;
+        margin: 10px 0;
+      
+    }
+     
+   
+
 }
+
    
     
 
